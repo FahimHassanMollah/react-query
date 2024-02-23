@@ -1,12 +1,13 @@
-import ProductDetails from "./components/ProductDetails"
-import ProductList from "./components/ProductList"
+import Index from "./Index"
+import { SelectedProductIdProvider } from "./providers"
+
 
 const App = () => {
+  console.log('app rendering ............');
   return (
-    <div className="flex m-2">
-      <ProductList/>
-      <ProductDetails id="1"/>
-    </div>
+    <SelectedProductIdProvider>
+      <Index />
+    </SelectedProductIdProvider>
   )
 }
 
